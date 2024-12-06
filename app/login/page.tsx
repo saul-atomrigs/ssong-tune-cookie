@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import TextInput from '../components/TextInput';
-import Button from '../components/Button';
 import { useRouter } from 'next/navigation';
-import Ads from '../components/Ads';
+import { TextInput, Button, Ads } from '@/app/components';
 
 const TEXT_LIMIT = 30;
 const ALLOWED_PATTERN = /^[ㄱ-ㅎ가-힣a-zA-Z\s!@#$%^&*(),.?":{}|<>]*$/;
