@@ -35,14 +35,12 @@ export default function Login() {
   };
 
   return (
-    <div className='flex flex-col min-h-screen bg-[#FFF1E7]'>
+    <div className='flex flex-col min-h-screen'>
       <div className='flex-1 flex items-center justify-center p-5'>
         <div className='flex flex-col items-center space-y-5'>
-          <h1 className='text-2xl font-bold text-gray-950'>
-            🎵 노래 포춘쿠키 🔮
-          </h1>
+          <h1 className='text-2xl font-bold'>🎵 노래 포춘쿠키 🔮</h1>
           <div className='w-[55%] text-center'>
-            <p className='text-gray-950 text-xs'>
+            <p className='text-xs'>
               2025년 내가 가장 원하는 것을 얻게 해줄 노래를 들어보세요
             </p>
           </div>
