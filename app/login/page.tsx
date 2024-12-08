@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { TextInput, Button, Ads } from '@/app/components';
+import useUserStore from '@/store/userStore';
 
 const TEXT_LIMIT = 30;
 const ALLOWED_PATTERN = /^[ㄱ-ㅎ가-힣a-zA-Z\s!@#$%^&*(),.?":{}|<>]*$/;
@@ -30,6 +31,7 @@ export default function Login() {
 
   const handleSubmit = () => {
     if (text.length > 0) {
+      useUserStore.getState().setName(text);
       router.push('/list');
     }
   };
