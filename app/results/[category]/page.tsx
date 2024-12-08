@@ -21,6 +21,25 @@ const ResultPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleShare = async () => {
+    const youtubeLink = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Check out this video!',
+          text: 'Here is a great video I found:',
+          url: youtubeLink,
+        });
+        alert('Link shared successfully!');
+      } catch (error) {
+        console.log('Error sharing:', error);
+      }
+    } else {
+      alert('Sharing is not supported on this browser.');
+    }
+  };
+
   if (isLoading) {
     return (
       <main className='flex flex-col items-center min-h-screen'>
@@ -72,7 +91,7 @@ const ResultPage = () => {
       </div>
 
       <div className='flex flex-col w-[80%] max-w-sm gap-4 m-auto mb-5'>
-        <Button onClick={() => {}} variant='primary'>
+        <Button onClick={handleShare} variant='primary'>
           공유하고 운 받아가기
         </Button>
         <Button onClick={() => router.push('/')} variant='secondary'>
