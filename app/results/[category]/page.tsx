@@ -4,11 +4,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Ads, Badge, Button } from '@/app/components';
+import useUserStore from '@/store/userStore';
 
 const ResultPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
   const params = useParams();
+  const { name } = useUserStore();
   const category = params.category
     ? decodeURIComponent(params.category as string)
     : 'unknown';
@@ -59,7 +61,7 @@ const ResultPage = () => {
         <h1 className='text-2xl font-bold text-center'>
           2025년 명예를 원하는
           <br />
-          나나나님을 위한 노래
+          {name}님을 위한 노래
         </h1>
 
         <div className='relative w-full max-w-[500px]'>
