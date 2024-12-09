@@ -25,8 +25,8 @@ const TextInput: React.FC<TextInputProps> = ({
         onFocus={onFocus}
         onBlur={onBlur}
         placeholder='이름을 입력해주세요'
-        className={`w-full p-2 border text-xs text-black ${
-          value ? 'border-blue-500' : 'border-gray-300'
+        className={`w-full p-3 border text-xs text-black placeholder:text-gray-300 ${
+          value ? 'border-blue-500' : 'border-gray-100'
         } rounded-lg`}
       />
     </div>
