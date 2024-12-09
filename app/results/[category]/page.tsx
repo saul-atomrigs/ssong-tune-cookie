@@ -46,7 +46,7 @@ const ResultPage = () => {
     return (
       <main className='flex flex-col items-center min-h-screen'>
         <div className='flex-1 flex items-center justify-center'>
-          <p className='text-xl'>쿠키 고르는 중..</p>
+          <h1 className='text-xl font-[GmarketSans]'>쿠키 고르는 중..</h1>
         </div>
         <div className='w-full px-5 pb-5'>
           <Ads />
@@ -58,8 +58,8 @@ const ResultPage = () => {
   return (
     <div className='flex flex-col min-h-screen'>
       <div className='flex-1 flex flex-col items-center pt-7 space-y-8'>
-        <h1 className='text-2xl font-bold text-center'>
-          2025년 명예를 원하는
+        <h1 className='text-2xl font-bold text-center font-[GmarketSans]'>
+          2025년 {category}를 원하는
           <br />
           {name}님을 위한 노래
         </h1>
