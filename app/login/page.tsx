@@ -56,7 +56,7 @@ export default function Login() {
             tag='이름'
           />
           <Button onClick={handleSubmit} disabled={text.length === 0}>
-            시작하기
+            다음
           </Button>
         </div>
       </div>
