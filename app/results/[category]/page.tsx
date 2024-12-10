@@ -74,7 +74,7 @@ const ResultPage = () => {
 
         <div className='relative w-full max-w-[500px]'>
           <Image
-            src='/white.svg'
+            src='/youtube-container.svg'
             alt='White background'
             width={500}
             height={500}
