@@ -2,20 +2,21 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Ads, ProgressBar } from '@/app/components';
 
 const ListPage = () => {
   const router = useRouter();
 
   const items = [
-    { text: '돈', emoji: '💰' },
-    { text: '사랑', emoji: '❤️' },
-    { text: '지식', emoji: '📚' },
-    { text: '커리어', emoji: '💼' },
-    { text: '외모', emoji: '✨' },
-    { text: '건강', emoji: '💪' },
-    { text: '합격', emoji: '🎯' },
-    { text: '명예', emoji: '🏆' },
+    { text: '돈', icon: '/money.svg' },
+    { text: '사랑', icon: '/love.svg' },
+    { text: '지식', icon: '/knowledge.svg' },
+    { text: '커리어', icon: '/career.svg' },
+    { text: '외모', icon: '/face.svg' },
+    { text: '건강', icon: '/health.svg' },
+    { text: '합격', icon: '/pass.svg' },
+    { text: '명예', icon: '/star.svg' },
   ];
 
   const handleClick = (item: string) => {
@@ -33,13 +34,20 @@ const ListPage = () => {
             싶은 것은 무엇인가요?
           </h1>
           <div className='grid grid-cols-2 gap-2 w-full'>
-            {items.map(({ text, emoji }) => (
+            {items.map(({ text, icon }) => (
               <div
                 key={text}
                 onClick={() => handleClick(text)}
                 className='box flex flex-col items-center justify-center p-4 bg-[#FAE1DA] cursor-pointer hover:opacity-80 w-full'
               >
-                <span className='text-2xl mb-1'>{emoji}</span>
+                <div className='relative w-8 h-8 mb-1'>
+                  <Image
+                    src={icon}
+                    alt={text}
+                    fill
+                    className='object-contain'
+                  />
+                </div>
                 <span className='text-md font-bold'>{text}</span>
               </div>
             ))}
