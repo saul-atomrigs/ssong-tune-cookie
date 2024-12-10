@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { Ads } from '@/app/components';
+import { Ads, ProgressBar } from '@/app/components';
 
 const ListPage = () => {
   const router = useRouter();
@@ -24,6 +24,7 @@ const ListPage = () => {
 
   return (
     <div className='flex flex-col min-h-screen'>
+      <ProgressBar progress={66} />
       <div className='flex-1 flex items-center justify-center p-5 pb-24'>
         <div className='flex flex-col items-center space-y-7'>
           <h1 className='text-lg font-bold text-center w-[55%] font-[GmarketSans]'>
