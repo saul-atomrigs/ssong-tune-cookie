@@ -46,8 +46,15 @@ const ResultPage = () => {
     return (
       <main className='flex flex-col items-center min-h-screen'>
         <ProgressBar progress={100} />
-        <div className='flex-1 flex items-center justify-center'>
+        <div className='flex-1 flex items-center justify-center flex-col gap-8'>
           <h1 className='text-xl font-[GmarketSans]'>쿠키 고르는 중..</h1>
+          <Image
+            src='/fortune-cookie.svg'
+            alt='Fortune Cookie'
+            width={160}
+            height={154}
+            className='transform -rotate-90 scale-x-[-1]'
+          />
         </div>
         <div className='w-full px-5 pb-5'>
           <Ads />

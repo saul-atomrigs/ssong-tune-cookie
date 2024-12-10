@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { TextInput, Button, Ads, ProgressBar } from '@/app/components';
 import useUserStore from '@/store/userStore';
 
@@ -41,8 +42,15 @@ export default function Login() {
       <ProgressBar progress={33} />
       <div className='flex-1 flex items-center justify-center p-5'>
         <div className='flex flex-col items-center space-y-5'>
+          <Image
+            src='/fortune-cookie.svg'
+            alt='Fortune Cookie'
+            width={160}
+            height={154}
+            priority
+          />
           <h1 className='text-2xl font-bold font-[GmarketSans]'>
-            🎵 노래 포춘쿠키 🔮
+            노래 포춘쿠키 🎶
           </h1>
           <div className='w-[55%] text-center'>
             <p className='text-xs'>
