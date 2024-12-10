@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
 }) => {
-  const baseStyles = 'w-full rounded-3xl py-2.5 px-5 text-sm font-semibold';
+  const baseStyles = 'w-full rounded-3xl py-3.5 px-5 text-sm font-semibold';
   const variantStyles = disabled
     ? 'bg-[#eee] cursor-not-allowed'
     : variant === 'primary'
