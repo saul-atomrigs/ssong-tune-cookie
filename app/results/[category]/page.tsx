@@ -84,17 +84,17 @@ const ResultPage = () => {
             <Badge backgroundColor='#FFE7E3' textColor='#C35424'>
               {category}운
             </Badge>
-            <div className='w-full max-w-[250px] aspect-video'>
+            <div className='w-[80%] aspect-video'>
               <iframe
-                className='w-full h-full'
+                className='w-full h-full rounded-xl'
                 src='https://www.youtube.com/embed/HjagNSnWHPw'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
               />
             </div>
             <div className='text-center'>
-              <p className='font-bold'>듣기만 해도 성공하는 음악</p>
-              <p className='text-sm text-gray-600'>조빈</p>
+              <p className='font-bold text-xl'>듣기만 해도 성공하는 음악</p>
+              <p className='font-bold'>조빈</p>
             </div>
           </div>
         </div>
