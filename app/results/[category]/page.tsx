@@ -7,6 +7,17 @@ import { Ads, Badge, Button, ProgressBar } from '@/app/components';
 import useUserStore from '@/store/userStore';
 
 const ResultPage = () => {
+  const categoryMapping: { [key: string]: string } = {
+    돈: '재물운',
+    사랑: '애정운',
+    지식: '학업운',
+    커리어: '직장운',
+    외모: '여행운',
+    건강: '건강운',
+    합격: '합격운',
+    명예: '명예운',
+  };
+
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
   const params = useParams();
@@ -67,7 +78,7 @@ const ResultPage = () => {
     <div className='flex flex-col min-h-screen'>
       <div className='flex-1 flex flex-col items-center pt-7 space-y-8'>
         <h1 className='text-2xl font-bold text-center font-[GmarketSans]'>
-          2025년 {category}를 원하는
+          2025년 {categoryMapping[category]}을 원하는
           <br />
           {name}님을 위한 노래
         </h1>
@@ -82,7 +93,7 @@ const ResultPage = () => {
           />
           <div className='absolute inset-0 flex flex-col items-center justify-center space-y-4'>
             <Badge backgroundColor='#FFE7E3' textColor='#C35424'>
-              {category}운
+              {categoryMapping[category]}
             </Badge>
             <div className='w-[80%] aspect-video'>
               <iframe
