@@ -114,7 +114,7 @@ const ResultPage = () => {
         <Button onClick={handleShare} variant='primary'>
           공유하고 운 받아가기
         </Button>
-        <Button onClick={() => router.push('/login')} variant='secondary'>
+        <Button onClick={() => router.push('/list')} variant='secondary'>
           더 뽑기
         </Button>
       </div>
