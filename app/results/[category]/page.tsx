@@ -40,16 +40,15 @@ const ResultPage = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Check out this video!',
-          text: 'Here is a great video I found:',
+          title: '2025년 내 운세 보러가기',
+          text: '새해 나의 운세를 확인하고, 나에게 맞는 노래를 들어보세요!',
           url: youtubeLink,
         });
-        alert('Link shared successfully!');
       } catch (error) {
-        console.log('Error sharing:', error);
+        console.log('Share Error:', error);
       }
     } else {
-      alert('Sharing is not supported on this browser.');
+      alert('공유가 지원하지 않습니다.');
     }
   };
 
