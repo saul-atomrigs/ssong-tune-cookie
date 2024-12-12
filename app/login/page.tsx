@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { TextInput, Button, Ads, ProgressBar } from '@/app/components';
+import { TextInput, Button, Ads } from '@/app/components';
 import useUserStore from '@/store/userStore';
 
 const TEXT_LIMIT = 8;
@@ -39,7 +39,6 @@ export default function Login() {
 
   return (
     <div className='flex flex-col min-h-screen'>
-      <ProgressBar progress={33} />
       <div className='flex-1 flex items-center justify-center p-5'>
         <div className='flex flex-col items-center space-y-5'>
           <Image

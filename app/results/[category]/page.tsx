@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { Ads, Badge, Button, ProgressBar } from '@/app/components';
+import { Ads, Badge, Button } from '@/app/components';
 import useUserStore from '@/store/userStore';
 
 const ResultPage = () => {
@@ -55,7 +55,6 @@ const ResultPage = () => {
   if (isLoading) {
     return (
       <main className='flex flex-col items-center min-h-screen'>
-        <ProgressBar progress={100} />
         <div className='flex-1 flex items-center justify-center flex-col gap-8'>
           <h1 className='text-xl font-[GmarketSans]'>쿠키 고르는 중..</h1>
           <Image
