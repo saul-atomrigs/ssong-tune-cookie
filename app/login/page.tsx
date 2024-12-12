@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { TextInput, Button, Ads, ProgressBar } from '@/app/components';
 import useUserStore from '@/store/userStore';
 
-const TEXT_LIMIT = 30;
+const TEXT_LIMIT = 8;
 const ALLOWED_PATTERN = /^[ㄱ-ㅎ가-힣a-zA-Z\s!@#$%^&*(),.?":{}|<>]*$/;
 
 export default function Login() {
