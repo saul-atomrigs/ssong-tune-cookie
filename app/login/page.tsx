@@ -10,7 +10,8 @@ const TEXT_LIMIT = 8;
 const ALLOWED_PATTERN = /^[ㄱ-ㅎ가-힣a-zA-Z\s!@#$%^&*(),.?":{}|<>]*$/;
 
 export default function Login() {
-  const [text, setText] = useState('');
+  const { name } = useUserStore();
+  const [username, setUsername] = useState(name);
   const [isFocused, setIsFocused] = useState(false);
   const router = useRouter();
 
@@ -18,7 +19,7 @@ export default function Login() {
     const value = e.target.value;
 
     if (value.length <= TEXT_LIMIT && ALLOWED_PATTERN.test(value)) {
-      setText(value);
+      setUsername(value);
     }
   };
 
@@ -31,8 +32,8 @@ export default function Login() {
   };
 
   const handleSubmit = () => {
-    if (text.length > 0) {
-      useUserStore.getState().setName(text);
+    if (username.length > 0) {
+      useUserStore.getState().setName(username);
       router.push('/list');
     }
   };
@@ -57,13 +58,13 @@ export default function Login() {
             </p>
           </div>
           <TextInput
-            value={text}
+            value={username}
             onChange={handleChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
             tag='이름'
           />
-          <Button onClick={handleSubmit} disabled={text.length === 0}>
+          <Button onClick={handleSubmit} disabled={username.length === 0}>
             다음
           </Button>
         </div>
