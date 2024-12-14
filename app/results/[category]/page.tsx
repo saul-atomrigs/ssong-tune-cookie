@@ -3,22 +3,18 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
+
 import { Ads, Badge, Button } from '@/app/components';
 import useUserStore from '@/store/userStore';
+import songsData from '@/db.json';
+import { getYoutubeEmbedUrl, pickRandomSong } from '@/utils';
+import type { SongData } from '@/types';
+import { categoryMapping } from '@/constants';
 
 const ResultPage = () => {
-  const categoryMapping: { [key: string]: string } = {
-    돈: '재물운',
-    사랑: '애정운',
-    지식: '학업운',
-    커리어: '직장운',
-    여행: '여행운',
-    건강: '건강운',
-    합격: '합격운',
-    명예: '명예운',
-  };
-
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedSong, setSelectedSong] = useState<SongData | null>(null);
+
   const router = useRouter();
   const params = useParams();
   const { name } = useUserStore();
@@ -28,11 +24,13 @@ const ResultPage = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      const randomSong = pickRandomSong(category, songsData);
+      setSelectedSong(randomSong);
       setIsLoading(false);
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [category]);
 
   const handleShare = async () => {
     const youtubeLink = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
@@ -94,16 +92,18 @@ const ResultPage = () => {
               {categoryMapping[category]}
             </Badge>
             <div className='w-[80%] aspect-video'>
-              <iframe
-                className='w-full h-full rounded-xl'
-                src='https://www.youtube.com/embed/HjagNSnWHPw'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowFullScreen
-              />
+              {selectedSong && (
+                <iframe
+                  className='w-full h-full rounded-xl'
+                  src={getYoutubeEmbedUrl(selectedSong.youtubeUrl)}
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                />
+              )}
             </div>
             <div className='text-center'>
-              <p className='font-bold text-xl'>듣기만 해도 성공하는 음악</p>
-              <p className='font-bold'>조빈</p>
+              <p className='font-bold text-xl'>{selectedSong?.song}</p>
+              <p className='font-bold'>{selectedSong?.singer}</p>
             </div>
           </div>
         </div>
