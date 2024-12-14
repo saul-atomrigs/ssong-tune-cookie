@@ -52,7 +52,7 @@ const ResultPage = () => {
 
   if (isLoading) {
     return (
-      <main className='flex flex-col items-center min-h-screen'>
+      <main className='flex flex-col items-center h-[100dvh]'>
         <div className='flex-1 flex items-center justify-center flex-col gap-8'>
           <h1 className='text-xl font-[GmarketSans]'>쿠키 고르는 중..</h1>
           <Image
@@ -71,7 +71,7 @@ const ResultPage = () => {
   }
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex flex-col items-center pt-7 space-y-8'>
         <h1 className='text-2xl font-bold text-center font-[GmarketSans]'>
           2025년 {categoryMapping[category]}을 원하는

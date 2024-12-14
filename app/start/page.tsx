@@ -7,7 +7,7 @@ const App = () => {
   const router = useRouter();
 
   return (
-    <div className='relative flex flex-col items-center justify-between min-h-screen bg-[#FF8D22] text-white overflow-hidden'>
+    <div className='relative flex flex-col items-center justify-between bg-[#FF8D22] text-white overflow-hidden h-[100dvh]'>
       <div className='absolute top-0 left-0 w-full h-24 sm:h-32 bg-[#ff800a]' />
       <div
         className='absolute top-6 sm:top-8 left-0 w-full h-20 sm:h-24 bg-[#FF8D22]'

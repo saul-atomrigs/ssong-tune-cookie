@@ -39,7 +39,7 @@ export default function Login() {
   };
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex items-center justify-center p-5'>
         <div className='flex flex-col items-center space-y-5'>
           <Image

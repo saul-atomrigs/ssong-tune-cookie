@@ -24,7 +24,7 @@ const ListPage = () => {
   };
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex items-center justify-center p-3 pb-24'>
         <div className='flex flex-col items-center space-y-7 w-full max-w-sm'>
           <h1 className='text-3xl font-bold text-center font-[GmarketSans]'>
