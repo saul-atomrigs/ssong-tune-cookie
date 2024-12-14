@@ -33,7 +33,7 @@ const ResultPage = () => {
   }, [category]);
 
   const handleShare = async () => {
-    const youtubeLink = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    const youtubeLink = selectedSong?.youtubeUrl;
 
     if (navigator.share) {
       try {
