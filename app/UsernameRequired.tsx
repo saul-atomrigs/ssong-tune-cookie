@@ -13,16 +13,25 @@ export default function UsernameRequired({
 }) {
   const { name } = useUserStore();
   const pathname = usePathname();
-  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    if (!name && !publicPaths.includes(pathname)) {
+    setIsHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (isHydrated && !name && !publicPaths.includes(pathname)) {
       redirect('/start');
     }
-    setIsAuthorized(true);
-  }, [name, pathname]);
+  }, [isHydrated, name, pathname]);
 
-  if (!isAuthorized && !publicPaths.includes(pathname)) {
+  // Don't render anything until hydration is complete
+  if (!isHydrated) {
+    return null;
+  }
+
+  // After hydration, check if we're on a public path or if user has a name
+  if (!publicPaths.includes(pathname) && !name) {
     return null;
   }
 
