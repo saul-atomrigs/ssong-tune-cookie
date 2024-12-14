@@ -14,13 +14,6 @@
   --font-gmarket: 'GmarketSans', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #fff5e9;
-    --foreground: #171717;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
