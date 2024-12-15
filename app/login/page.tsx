@@ -12,7 +12,7 @@ const ALLOWED_PATTERN = /^[ㄱ-ㅎ가-힣a-zA-Z\s!@#$%^&*(),.?":{}|<>]*$/;
 export default function Login() {
   const { name } = useUserStore();
   const [username, setUsername] = useState(name);
-  const [isFocused, setIsFocused] = useState(false);
+  const [, setIsFocused] = useState(false);
   const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
