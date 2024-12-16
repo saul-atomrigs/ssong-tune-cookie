@@ -13,7 +13,7 @@ const ListPage = () => {
     { text: '사랑', icon: '/love.svg' },
     { text: '지식', icon: '/knowledge.svg' },
     { text: '커리어', icon: '/career.svg' },
-    { text: '여행', icon: '/face.svg' },
+    { text: '여행', icon: '/travel.svg' },
     { text: '건강', icon: '/health.svg' },
     { text: '합격', icon: '/pass.svg' },
     { text: '명예', icon: '/star.svg' },
