@@ -39,7 +39,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className='w-full max-w-[500px] px-4 sm:px-6 mx-auto fixed bottom-0 left-0 bg-[#FF8D22] py-3'>
+      <div className='w-full max-w-[500px] px-4 sm:px-6 fixed bottom-0 left-1/2 -translate-x-1/2 bg-[#FF8D22] py-3'>
         <Button onClick={() => router.push('/login')} variant='start'>
           뽑기 시작하기
         </Button>

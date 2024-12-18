@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Lottie from 'react-lottie-player';
 
 import { Ads, Badge, Button } from '@/app/components';
 import useUserStore from '@/store/userStore';
@@ -10,6 +11,7 @@ import songsData from '@/db.json';
 import { getYoutubeEmbedUrl, pickRandomSong } from '@/utils';
 import type { SongData } from '@/types';
 import { categoryMapping } from '@/constants';
+import cookieAnimation from '@/public/cookie-animation.json';
 
 const ResultPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,16 +52,10 @@ const ResultPage = () => {
 
   if (isLoading) {
     return (
-      <main className='flex flex-col items-center h-[100dvh]'>
-        <div className='flex-1 flex items-center justify-center flex-col gap-8'>
-          <h1 className='text-xl font-[GmarketSans]'>쿠키 고르는 중..</h1>
-          <Image
-            src='/fortune-cookie.svg'
-            alt='Fortune Cookie'
-            width={160}
-            height={154}
-            className='transform -rotate-90 scale-x-[-1]'
-          />
+      <main className='grid h-[100dvh] grid-rows-[1fr,auto]'>
+        <div className='flex flex-col items-center justify-center -mt-20'>
+          <h1 className='text-xl font-[GmarketSans] mb-4'>쿠키 고르는 중..</h1>
+          <Lottie loop animationData={cookieAnimation} play />
         </div>
         <div className='w-full px-5 pb-5'>
           <Ads />
