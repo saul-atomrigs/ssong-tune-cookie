@@ -9,6 +9,23 @@ interface ShareModalProps {
 const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  const shareToKakao = () => {
+    const kakaoLink = `https://accounts.kakao.com/login?continue=https://sharer.kakao.com/talk/friends/picker/link`;
+    window.open(kakaoLink, '_blank');
+  };
+
+  const shareToInstagram = () => {
+    const instagramUrl = `instagram://`;
+    window.location.href = instagramUrl;
+  };
+
+  const shareToX = () => {
+    const text = encodeURIComponent('Check this out!');
+    const url = encodeURIComponent(window.location.href);
+    const xShareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+    window.open(xShareUrl, '_blank');
+  };
+
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       {/* 모달 컨텐츠 */}
@@ -21,7 +38,10 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
 
         {/* 공유 아이콘들 */}
         <div className='flex justify-around px-5 mb-4'>
-          <div className='flex flex-col items-center cursor-pointer'>
+          <div
+            className='flex flex-col items-center cursor-pointer'
+            onClick={shareToKakao}
+          >
             <img
               src='/kakaotalk-icon.png'
               alt='카카오톡'
@@ -30,7 +50,10 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
             <span className='text-xs'>카카오톡</span>
           </div>
 
-          <div className='flex flex-col items-center cursor-pointer'>
+          <div
+            className='flex flex-col items-center cursor-pointer'
+            onClick={shareToInstagram}
+          >
             <img
               src='/instagram-icon.png'
               alt='Instagram'
@@ -39,7 +62,10 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
             <span className='text-xs'>Instagram</span>
           </div>
 
-          <div className='flex flex-col items-center cursor-pointer'>
+          <div
+            className='flex flex-col items-center cursor-pointer'
+            onClick={shareToX}
+          >
             <img src='/x-icon.png' alt='X' className='w-12 h-12 mb-1' />
             <span className='text-xs'>X</span>
           </div>
