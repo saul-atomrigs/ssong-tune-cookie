@@ -17,7 +17,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
   const shareToInstagram = () => {
     const text = encodeURIComponent('Check this out!');
     const url = encodeURIComponent(window.location.href);
-    const instagramUrl = `https://www.instagram.com/share?text=${text}&url=${url}`;
+    const instagramUrl = `https://www.instagram.com/?text=${text}&url=${url}`;
     window.open(instagramUrl, '_blank');
   };
 
