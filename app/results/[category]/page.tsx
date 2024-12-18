@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Lottie from 'react-lottie-player';
 
-import { Ads, Badge, Button } from '@/app/components';
+import { Ads, Badge, Button, ShareLinkModal } from '@/app/components';
 import useUserStore from '@/store/userStore';
 import songsData from '@/db.json';
 import { getYoutubeEmbedUrl, pickRandomSong } from '@/utils';
@@ -16,6 +16,7 @@ import cookieAnimation from '@/public/cookie-animation.json';
 const ResultPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedSong, setSelectedSong] = useState<SongData | null>(null);
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
   const router = useRouter();
   const params = useParams();
@@ -46,7 +47,7 @@ const ResultPage = () => {
         console.log('Share Error:', error);
       }
     } else {
-      alert('공유가 지원하지 않습니다.');
+      setIsShareModalOpen(true);
     }
   };
 
@@ -117,6 +118,11 @@ const ResultPage = () => {
       <div className='w-full px-5 pb-5'>
         <Ads />
       </div>
+
+      <ShareLinkModal
+        isOpen={isShareModalOpen}
+        onClose={() => setIsShareModalOpen(false)}
+      />
     </div>
   );
 };
