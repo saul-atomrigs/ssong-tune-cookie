@@ -45,7 +45,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
             onClick={shareToKakao}
           >
             <img
-              src='/kakaotalk-icon.png'
+              src='/kakaotalk.svg'
               alt='카카오톡'
               className='w-12 h-12 mb-1'
             />
@@ -57,7 +57,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
             onClick={shareToInstagram}
           >
             <img
-              src='/instagram-icon.png'
+              src='/instagram.svg'
               alt='Instagram'
               className='w-12 h-12 mb-1'
             />
@@ -68,7 +68,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
             className='flex flex-col items-center cursor-pointer'
             onClick={shareToX}
           >
-            <img src='/x-icon.png' alt='X' className='w-12 h-12 mb-1' />
+            <img src='/x.svg' alt='X' className='w-12 h-12 mb-1' />
             <span className='text-xs'>X</span>
           </div>
         </div>
