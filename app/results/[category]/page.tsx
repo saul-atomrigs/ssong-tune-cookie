@@ -68,9 +68,11 @@ const ResultPage = () => {
     <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex flex-col items-center pt-7 space-y-8'>
         <h1 className='text-2xl font-bold text-center font-[GmarketSans]'>
-          2025년 {categoryMapping[category]}을 원하는
+          2025년{' '}
+          <span className='text-[#FF7700]'>{categoryMapping[category]}</span>을
+          원하는
           <br />
-          {name}님을 위한 노래
+          <span className='text-[#FF7700]'>{name}</span>님을 위한 노래
         </h1>
 
         <div className='relative w-full max-w-[500px]'>
