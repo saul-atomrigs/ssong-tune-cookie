@@ -10,6 +10,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('/fonts/Paperlogy.ttf') format('truetype');
+  font-weight: 600;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,6 +25,7 @@
   --foreground: #171717;
   --font-gmarket: 'GmarketSans', sans-serif;
   --font-changwon: 'ChangwonDangamAsac', sans-serif;
+  --font-paperlogy: 'Paperlogy', sans-serif;
   --screen-height: 100dvh;
 }
 
