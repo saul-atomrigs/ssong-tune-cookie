@@ -11,7 +11,7 @@ const App = () => {
       <div className='h-full overflow-y-auto'>
         <div className='flex flex-col items-center'>
           <div className='pt-8 sm:pt-16'>
-            <h1 className='text-4xl sm:text-5xl font-bold text-center font-[ChangwonDangamAsac] leading-relaxed'>
+            <h1 className='text-4xl sm:text-5xl font-bold text-center font-[ChangwonDangamAsac] text-[#FFFBE6] leading-relaxed'>
               2025 <br /> 쏭-춘쿠키
             </h1>
           </div>
@@ -24,7 +24,7 @@ const App = () => {
                 className='object-contain'
               />
             </div>
-            <p className='mt-4 sm:mt-6 text-xl sm:text-2xl text-center font-medium px-4'>
+            <p className='mt-4 sm:mt-6 text-md sm:text-xl text-[#FFFBE6] text-center font-medium px-4'>
               2025년 내가 가장 원하는 것을 <br />
               얻게 해줄 노래를 들어보세요
             </p>
