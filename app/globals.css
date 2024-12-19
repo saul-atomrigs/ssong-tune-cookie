@@ -1,7 +1,19 @@
 @font-face {
-  font-family: 'GmarketSans';
-  src: url('/fonts/GmarketSansTTFBold.ttf') format('truetype');
+  font-family: 'Paperlogy';
+  src: url('/fonts/PaperlogyTTFBold.ttf') format('truetype');
   font-weight: 700;
+}
+
+@font-face {
+  font-family: 'ChangwonDangamAsac';
+  src: url('/fonts/ChangwonDangamAsac.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('/fonts/Paperlogy.ttf') format('truetype');
+  font-weight: 600;
 }
 
 @tailwind base;
@@ -11,7 +23,9 @@
 :root {
   --background: #fff5e9;
   --foreground: #171717;
-  --font-gmarket: 'GmarketSans', sans-serif;
+  --font-gmarket: 'Paperlogy', sans-serif;
+  --font-changwon: 'ChangwonDangamAsac', sans-serif;
+  --font-paperlogy: 'Paperlogy', sans-serif;
   --screen-height: 100dvh;
 }
 

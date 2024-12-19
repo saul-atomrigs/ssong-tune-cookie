@@ -34,7 +34,13 @@ export default function RootLayout({
           content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body
+        className={`${inter.className} antialiased`}
+        style={{
+          background:
+            'linear-gradient(180deg, #EC7D86 -29.56%, #EF7052 37.77%, #F3B06C 100%)',
+        }}
+      >
         <UsernameRequired>{children}</UsernameRequired>
       </body>
     </html>
