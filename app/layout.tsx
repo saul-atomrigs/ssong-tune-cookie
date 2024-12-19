@@ -10,9 +10,14 @@ export const metadata: Metadata = {
   description: '새해 운세를 음악으로 들어보세요!',
   openGraph: {
     description: '2025년 내가 원하는 것을 얻게 해줄 노래는?',
-    images: {
-      url: '/opengraph.png',
-    },
+    images: [
+      {
+        url: '/open-graph.png',
+        width: 800,
+        height: 600,
+        alt: '쏭-춘쿠키',
+      },
+    ],
   },
 };
 
