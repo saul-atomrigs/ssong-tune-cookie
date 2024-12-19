@@ -19,7 +19,7 @@ const App = () => {
             }}
           />
           <div className='pt-8 sm:pt-16 z-10'>
-            <h1 className='text-4xl sm:text-5xl font-bold text-center font-[GmarketSans] leading-relaxed'>
+            <h1 className='text-4xl sm:text-5xl font-bold text-center font-[ChangwonDangamAsac] leading-relaxed'>
               2025 <br /> 쏭-춘쿠키
             </h1>
           </div>
