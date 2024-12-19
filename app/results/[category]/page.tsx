@@ -55,7 +55,7 @@ const ResultPage = () => {
     return (
       <main className='grid h-[100dvh] grid-rows-[1fr,auto]'>
         <div className='flex flex-col items-center justify-center -mt-20'>
-          <h1 className='text-xl font-[GmarketSans] mb-4'>쿠키 고르는 중..</h1>
+          <h1 className='text-xl font-[Paperlogy] mb-4'>쿠키 고르는 중..</h1>
           <Lottie loop animationData={cookieAnimation} play />
         </div>
         <div className='w-full px-5 pb-5'>
@@ -68,12 +68,12 @@ const ResultPage = () => {
   return (
     <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex flex-col items-center pt-7 space-y-8'>
-        <h1 className='text-2xl font-bold text-center font-[GmarketSans]'>
+        <h1 className='text-2xl font-bold text-center font-[Paperlogy] text-[#FFF8EC]'>
           2025년{' '}
-          <span className='text-[#FF7700]'>{categoryMapping[category]}</span>을
+          <span className='text-[#FFEF4C]'>{categoryMapping[category]}</span>을
           원하는
           <br />
-          <span className='text-[#FF7700]'>{name}</span>님을 위한 노래
+          <span className='text-[#FFEF4C]'>{name}</span>님을 위한 노래
         </h1>
 
         <div className='relative w-full max-w-[500px]'>

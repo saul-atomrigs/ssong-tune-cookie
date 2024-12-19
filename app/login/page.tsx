@@ -49,12 +49,12 @@ export default function Login() {
             height={154}
             priority
           />
-          <h1 className='text-2xl font-bold font-[GmarketSans]'>
+          <h1 className='text-2xl font-bold font-[Paperlogy] text-[#FFF8EC]'>
             노래 포춘쿠키 🎶
           </h1>
-          <div className='w-[55%] text-center'>
-            <p className='text-xs'>
-              2025년 내가 가장 원하는 것을 얻게 해줄 노래를 들어보세요
+          <div className='text-center'>
+            <p className='text-xs text-[#FFF8EC]'>
+              2025년 내가 가장 원하는 것을 <br /> 얻게 해줄 노래를 들어보세요
             </p>
           </div>
           <TextInput

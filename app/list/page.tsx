@@ -27,7 +27,7 @@ const ListPage = () => {
     <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex items-center justify-center p-3 pb-24'>
         <div className='flex flex-col items-center space-y-7 w-full max-w-sm'>
-          <h1 className='text-3xl font-bold text-center font-[GmarketSans]'>
+          <h1 className='text-3xl font-bold text-center font-[Paperlogy]'>
             2025년 가장 얻고
             <br />
             싶은 것은 무엇인가요?
