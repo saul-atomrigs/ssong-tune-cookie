@@ -30,7 +30,7 @@ const ResultPage = () => {
       const randomSong = pickRandomSong(category, songsData);
       setSelectedSong(randomSong);
       setIsLoading(false);
-    }, 3000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [category]);
