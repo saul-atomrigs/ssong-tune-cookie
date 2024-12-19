@@ -30,11 +30,11 @@ const App = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className='w-full max-w-[500px] px-4 sm:px-6 fixed bottom-0 left-1/2 -translate-x-1/2 py-3'>
-        <Button onClick={() => router.push('/login')} variant='start'>
-          뽑기 시작하기
-        </Button>
+        <div className='w-full max-w-[500px] px-4 sm:px-6 fixed bottom-0 left-1/2 -translate-x-1/2 py-3'>
+          <Button onClick={() => router.push('/login')} variant='start'>
+            뽑기 시작하기
+          </Button>
+        </div>
       </div>
     </div>
   );
