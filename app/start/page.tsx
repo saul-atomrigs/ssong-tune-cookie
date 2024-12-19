@@ -9,16 +9,8 @@ const App = () => {
   return (
     <div className='relative bg-[#FF8D22] text-white h-[100dvh]'>
       <div className='h-full overflow-y-auto'>
-        <div className='relative flex flex-col items-center'>
-          <div className='absolute top-0 left-0 w-full h-24 sm:h-32 bg-[#ff800a]' />
-          <div
-            className='absolute top-6 sm:top-8 left-0 w-full h-20 sm:h-24 bg-[#FF8D22]'
-            style={{
-              borderTopLeftRadius: '50% 100%',
-              borderTopRightRadius: '50% 100%',
-            }}
-          />
-          <div className='pt-8 sm:pt-16 z-10'>
+        <div className='flex flex-col items-center'>
+          <div className='pt-8 sm:pt-16'>
             <h1 className='text-4xl sm:text-5xl font-bold text-center font-[ChangwonDangamAsac] leading-relaxed'>
               2025 <br /> 쏭-춘쿠키
             </h1>
