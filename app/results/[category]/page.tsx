@@ -110,10 +110,10 @@ const ResultPage = () => {
 
       <div className='flex flex-col w-[80%] max-w-sm gap-4 m-auto mb-5'>
         <Button onClick={handleShare} variant='primary'>
-          공유하고 운 받아가기
+          뽑기 공유하고 운 받아가기
         </Button>
         <Button onClick={() => router.push('/list')} variant='secondary'>
-          더 뽑기
+          다시 뽑기
         </Button>
       </div>
 
