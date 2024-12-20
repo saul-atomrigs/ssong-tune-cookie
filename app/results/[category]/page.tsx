@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import Lottie from 'react-lottie-player';
+import Image from 'next/image';
 
-import { Ads, Badge, Button, ShareLinkModal } from '@/app/components';
-import useUserStore from '@/store/userStore';
-import songsData from '@/db.json';
-import { getYoutubeEmbedUrl, pickRandomSong } from '@/utils';
-import type { SongData } from '@/types';
+import { Ads, Button, ShareLinkModal } from '@/app/components';
 import { categoryMapping } from '@/constants';
+import songsData from '@/db.json';
 import cookieAnimation from '@/public/cookie-animation.json';
+import useUserStore from '@/store/userStore';
+import type { SongData } from '@/types';
+import { getYoutubeEmbedUrl, pickRandomSong } from '@/utils';
 
 const ResultPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -79,28 +79,43 @@ const ResultPage = () => {
         </h1>
 
         <div className='relative w-full max-w-[500px]'>
-          <Image
-            src='/youtube-container.svg'
-            alt='White background'
-            width={500}
-            height={500}
-            className='w-full h-auto'
-          />
-          <div className='absolute inset-0 flex flex-col items-center justify-center space-y-4'>
-            <Badge backgroundColor='#FFE7E3' textColor='#C35424'>
-              {categoryMapping[category]}
-            </Badge>
-            <div className='w-[80%] aspect-video'>
+          <div
+            className='w-[80%] mx-auto aspect-[1.16/1] bg-[#FFF8EC] shadow-[4px_4px_12px_0px_#FFB87F3D] relative'
+            style={{ transform: 'rotate(2.26deg)' }}
+          >
+            <Image
+              src='/cookie-up.svg'
+              alt='Cookie'
+              width={60}
+              height={60}
+              className='absolute -top-6 -left-7'
+            />
+            <Image
+              src='/cookie-bottom.svg'
+              alt='Cookie'
+              width={60}
+              height={60}
+              className='absolute -bottom-7 -right-7'
+            />
+          </div>
+          <div
+            className='absolute inset-0 flex flex-col items-center justify-center space-y-4'
+            style={{ transform: 'rotate(2.26deg)' }}
+          >
+            <div className='w-[70%] aspect-video'>
               {selectedSong && (
                 <iframe
-                  className='w-full h-full rounded-xl'
+                  className='w-full h-full'
                   src={getYoutubeEmbedUrl(selectedSong.youtubeUrl)}
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen
                 />
               )}
             </div>
-            <div className='text-center'>
+            <div
+              className='text-center'
+              style={{ transform: 'rotate(2.26deg)' }}
+            >
               <p className='font-bold text-xl'>{selectedSong?.song}</p>
               <p className='font-bold'>{selectedSong?.singer}</p>
             </div>
