@@ -1,10 +1,4 @@
 @font-face {
-  font-family: 'Paperlogy';
-  src: url('/fonts/PaperlogyTTFBold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-@font-face {
   font-family: 'ChangwonDangamAsac';
   src: url('/fonts/ChangwonDangamAsac.ttf') format('truetype');
   font-weight: 400;
@@ -23,7 +17,6 @@
 :root {
   --background: #fff5e9;
   --foreground: #171717;
-  --font-gmarket: 'Paperlogy', sans-serif;
   --font-changwon: 'ChangwonDangamAsac', sans-serif;
   --font-paperlogy: 'Paperlogy', sans-serif;
   --screen-height: 100dvh;
@@ -32,6 +25,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-gmarket);
   height: var(--screen-height);
 }
