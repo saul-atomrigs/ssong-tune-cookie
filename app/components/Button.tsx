@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
 }) => {
   const baseStyles =
-    'w-full rounded-3xl py-3.5 px-5 text-sm font-semibold font-[Paperlogy]';
+    'w-full rounded-3xl py-3.5 px-5 text-sm font-semibold font-[Paperlogy] transition-opacity duration-200 active:opacity-50';
   const variantStyles = disabled
     ? 'bg-[#EBEBEB] text-[#AEAEAE] cursor-not-allowed'
     : variant === 'primary'
