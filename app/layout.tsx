@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: '2025년 내가 원하는 것을 얻게 해줄 노래는?',
     images: [
       {
-        url: '/open-graph.png',
+        url: '/open-graph-new.png',
         width: 1200,
         height: 630,
         alt: '쏭-춘쿠키',
