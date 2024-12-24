@@ -1,5 +1,10 @@
-// components/ShareModal.tsx
 import React from 'react';
+
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
 
 interface ShareModalProps {
   isOpen: boolean;
@@ -10,8 +15,10 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const shareToKakao = () => {
-    const kakaoLink = `https://accounts.kakao.com/login?continue=https://sharer.kakao.com/talk/friends/picker/link`;
-    window.open(kakaoLink, '_blank');
+    const { Kakao, location } = window;
+    Kakao.Share.sendScrap({
+      requestUrl: location.href,
+    });
   };
 
   const shareToInstagram = () => {

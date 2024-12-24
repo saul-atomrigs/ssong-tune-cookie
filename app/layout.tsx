@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import UsernameRequired from './UsernameRequired';
+import KakaoScript from './KakaoScript';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,6 +44,7 @@ export default function RootLayout({
       >
         <UsernameRequired>{children}</UsernameRequired>
       </body>
+      <KakaoScript />
     </html>
   );
 }
