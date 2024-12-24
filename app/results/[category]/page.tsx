@@ -112,10 +112,7 @@ const ResultPage = () => {
                 />
               )}
             </div>
-            <div
-              className='text-center'
-              style={{ transform: 'rotate(2.26deg)' }}
-            >
+            <div className='text-center'>
               <p className='font-bold text-xl'>{selectedSong?.song}</p>
               <p className='font-bold'>{selectedSong?.singer}</p>
             </div>
