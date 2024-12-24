@@ -16,10 +16,14 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const shareToKakao = () => {
-    const { Kakao, location } = window;
-    Kakao.Share.sendScrap({
-      requestUrl: location.href,
-    });
+    try {
+      const { Kakao, location } = window;
+      Kakao.Share.sendScrap({
+        requestUrl: location.href,
+      });
+    } catch (error) {
+      console.log('Kakao Error:', error);
+    }
   };
 
   const shareToInstagram = () => {
