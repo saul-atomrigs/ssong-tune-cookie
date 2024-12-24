@@ -7,16 +7,16 @@ const App = () => {
   const router = useRouter();
 
   return (
-    <div className='relative text-white h-[100dvh]'>
-      <div className='h-full overflow-y-auto'>
-        <div className='flex flex-col items-center'>
-          <div className='pt-8 sm:pt-16'>
-            <h1 className='text-4xl sm:text-5xl font-bold text-center font-[ChangwonDangamAsac] text-[#FFFBE6] leading-relaxed'>
+    <div className='relative h-[100dvh]'>
+      <div className='h-full flex flex-col'>
+        <div className='flex-1 flex flex-col items-center justify-between'>
+          <div className='pt-6 sm:pt-10'>
+            <h1 className='text-5xl sm:text-7xl [@media(max-height:500px)]:text-3xl font-bold text-center font-[ChangwonDangamAsac] text-[#FFFBE6] leading-tight'>
               2025 <br /> 쏭-춘쿠키
             </h1>
           </div>
-          <div className='flex flex-col items-center py-4 sm:py-8'>
-            <div className='relative w-full max-w-[500px] aspect-square px-4'>
+          <div className='flex flex-col items-center py-2 sm:py-4'>
+            <div className='relative w-[100vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] [@media(max-height:500px)]:w-[60vw] aspect-[4/3] [@media(max-height:500px)]:aspect-[5/3] px-4'>
               <Image
                 src='/snake.svg'
                 alt='Snake'
@@ -24,16 +24,16 @@ const App = () => {
                 className='object-contain'
               />
             </div>
-            <p className='mt-4 sm:mt-6 text-md sm:text-xl text-[#FFFBE6] text-center font-medium px-4'>
+            <p className='mt-2 sm:mt-4 text-md sm:text-xl [@media(max-height:500px)]:text-sm text-[#FFFBE6] text-center font-medium px-4'>
               2025년 내가 가장 원하는 것을 <br />
               얻게 해줄 노래를 들어보세요
             </p>
           </div>
-        </div>
-        <div className='w-full max-w-[500px] px-4 sm:px-6 fixed bottom-0 left-1/2 -translate-x-1/2 py-3'>
-          <Button onClick={() => router.push('/login')} variant='start'>
-            뽑기 시작하기
-          </Button>
+          <div className='w-full max-w-[500px] px-4 sm:px-6 py-3 mb-2'>
+            <Button onClick={() => router.push('/login')} variant='start'>
+              뽑기 시작하기
+            </Button>
+          </div>
         </div>
       </div>
     </div>

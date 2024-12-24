@@ -27,17 +27,17 @@ const ListPage = () => {
     <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex items-center justify-center p-3 pb-24'>
         <div className='flex flex-col items-center space-y-7 w-full max-w-sm'>
-          <h1 className='text-3xl font-bold text-center font-[Paperlogy]'>
+          <h1 className='text-2xl font-bold text-center font-[Paperlogy] text-[#FFF8EC]'>
             2025년 가장 얻고
             <br />
             싶은 것은 무엇인가요?
           </h1>
-          <div className='grid grid-cols-2 gap-3 w-full'>
+          <div className='grid grid-cols-2 gap-3 w-full h-full'>
             {items.map(({ text, icon }) => (
               <div
                 key={text}
                 onClick={() => handleClick(text)}
-                className='box flex flex-col items-center justify-center p-5 bg-[#FFECD5] cursor-pointer hover:opacity-80 w-full rounded-lg'
+                className='flex flex-col items-center justify-center p-3 bg-[#FFECD5] cursor-pointer hover:opacity-80 rounded-lg'
               >
                 <div className='relative w-10 h-10 mb-2'>
                   <Image
@@ -52,9 +52,6 @@ const ListPage = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className='fixed bottom-0 left-0 right-0 px-5 pb-5'>
-        <Ads />
       </div>
     </div>
   );

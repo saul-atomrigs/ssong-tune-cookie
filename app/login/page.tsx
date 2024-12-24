@@ -45,8 +45,9 @@ export default function Login() {
           <Image
             src='/fortune-cookie.svg'
             alt='Fortune Cookie'
-            width={160}
-            height={154}
+            width={0}
+            height={0}
+            className='w-[160px] h-auto sm:w-[200px] md:w-[240px] [@media(max-height:500px)]:hidden'
             priority
           />
           <h1 className='text-2xl font-bold font-[Paperlogy] text-[#FFF8EC]'>
