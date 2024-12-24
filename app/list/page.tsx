@@ -3,7 +3,6 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { Ads } from '@/app/components';
 
 const ListPage = () => {
   const router = useRouter();
