@@ -36,7 +36,7 @@ const ResultPage = () => {
   }, [category]);
 
   const handleShare = async () => {
-    if (!navigator.share) {
+    if (navigator.share) {
       try {
         await navigator.share({
           title: '2025년 대박나러 가기',
