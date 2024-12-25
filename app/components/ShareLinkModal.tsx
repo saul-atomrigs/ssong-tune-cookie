@@ -27,14 +27,18 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
   };
 
   const shareToInstagram = () => {
-    const text = encodeURIComponent('Check this out!');
+    const text = encodeURIComponent(
+      '2025년 대박나러 가기 - 내가 원하는 운세를 가져다 줄 새해 노래를 들어보세요! '
+    );
     const url = encodeURIComponent(window.location.href);
     const instagramUrl = `https://www.instagram.com/?text=${text}&url=${url}`;
     window.open(instagramUrl, '_blank');
   };
 
   const shareToX = () => {
-    const text = encodeURIComponent('Check this out!');
+    const text = encodeURIComponent(
+      '2025년 대박나러 가기 - 내가 원하는 운세를 가져다 줄 새해 노래를 들어보세요! '
+    );
     const url = encodeURIComponent(window.location.href);
     const xShareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
     window.open(xShareUrl, '_blank');
