@@ -15,11 +15,13 @@ interface ShareModalProps {
 const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  const SHARE_URL = 'https://ssong-tune-cookie.vercel.app/';
+
   const shareToKakao = () => {
     try {
-      const { Kakao, location } = window;
+      const { Kakao } = window;
       Kakao.Share.sendScrap({
-        requestUrl: location.href,
+        requestUrl: SHARE_URL,
       });
     } catch (error) {
       console.log('Kakao Error:', error);
@@ -30,7 +32,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
     const text = encodeURIComponent(
       '2025년 대박나러 가기 - 내가 원하는 운세를 가져다 줄 새해 노래를 들어보세요! '
     );
-    const url = encodeURIComponent(window.location.href);
+    const url = encodeURIComponent(SHARE_URL);
     const instagramUrl = `https://www.instagram.com/?text=${text}&url=${url}`;
     window.open(instagramUrl, '_blank');
   };
@@ -39,7 +41,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
     const text = encodeURIComponent(
       '2025년 대박나러 가기 - 내가 원하는 운세를 가져다 줄 새해 노래를 들어보세요! '
     );
-    const url = encodeURIComponent(window.location.href);
+    const url = encodeURIComponent(SHARE_URL);
     const xShareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
     window.open(xShareUrl, '_blank');
   };
