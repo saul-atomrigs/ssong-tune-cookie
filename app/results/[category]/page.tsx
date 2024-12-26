@@ -61,7 +61,7 @@ const ResultPage = () => {
     return (
       <main className='grid h-[100dvh] grid-rows-[1fr,auto]'>
         <div className='flex flex-col items-center justify-center -mt-20'>
-          <h1 className='text-xl font-[Paperlogy] text-[#FFF8EC] mb-4'>
+          <h1 className='text-lg sm:text-xl font-[Paperlogy] text-[#FFF8EC] mb-4'>
             쿠키 고르는 중..
           </h1>
           <Lottie loop animationData={cookieAnimation} play />
@@ -75,8 +75,8 @@ const ResultPage = () => {
 
   return (
     <div className='flex flex-col h-[100dvh]'>
-      <div className='flex-1 flex flex-col items-center py-8 space-y-8'>
-        <h1 className='text-2xl text-center font-[Paperlogy-Bold] text-[#FFF8EC]'>
+      <div className='flex-1 flex flex-col items-center py-6 [@media(max-height:640px)]:pt-4 space-y-6 [@media(max-height:640px)]:space-y-4'>
+        <h1 className='text-xl [@media(max-height:640px)]:text-lg text-center font-[Paperlogy-Bold] text-[#FFF8EC]'>
           2025년{' '}
           <span className='text-[#FFEF4C]'>{categoryMapping[category]}</span>을
           원하는
@@ -119,8 +119,12 @@ const ResultPage = () => {
               )}
             </div>
             <div className='text-center'>
-              <p className='font-bold text-xl'>{selectedSong?.song}</p>
-              <p className='font-bold'>{selectedSong?.singer}</p>
+              <p className='font-bold text-xl [@media(max-height:640px)]:text-md'>
+                {selectedSong?.song}
+              </p>
+              <p className='font-bold [@media(max-height:640px)]:text-sm'>
+                {selectedSong?.singer}
+              </p>
             </div>
           </div>
         </div>
