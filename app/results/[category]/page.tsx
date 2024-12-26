@@ -120,7 +120,7 @@ const ResultPage = () => {
         </div>
       </div>
 
-      <div className='flex flex-col w-[80%] max-w-sm gap-4 m-auto mb-5'>
+      <div className='flex flex-col w-[80%] max-w-sm gap-2 m-auto mb-5'>
         <Button onClick={handleShare} variant='primary'>
           뽑기 공유하고 운 받아가기
         </Button>
