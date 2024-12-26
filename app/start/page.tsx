@@ -24,7 +24,7 @@ const App = () => {
                 className='object-contain'
               />
             </div>
-            <p className='mt-2 sm:mt-4 text-md sm:text-xl [@media(max-height:500px)]:text-sm text-[#FFFBE6] text-center font-medium px-4'>
+            <p className='mt-2 sm:mt-4 text-md sm:text-xl [@media(max-height:500px)]:text-sm text-[#FFFBE6] text-center font-medium font-[Paperlogy] px-4'>
               2025년 내가 가장 원하는 것을 <br />
               얻게 해줄 노래를 들어보세요
             </p>
