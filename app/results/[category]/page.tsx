@@ -75,8 +75,8 @@ const ResultPage = () => {
 
   return (
     <div className='flex flex-col h-[100dvh]'>
-      <div className='flex-1 flex flex-col items-center py-6 [@media(max-height:640px)]:pt-4 space-y-6 [@media(max-height:640px)]:space-y-4'>
-        <h1 className='text-xl [@media(max-height:640px)]:text-lg text-center font-[Paperlogy-Bold] text-[#FFF8EC]'>
+      <div className='flex-1 flex flex-col items-center py-10 [@media(max-height:680px)]:pt-4 space-y-6 [@media(max-height:680px)]:space-y-4'>
+        <h1 className='text-2xl [@media(max-height:680px)]:text-lg [@media(min-height:680px)]:mb-5 text-center font-[Paperlogy-Bold] text-[#FFF8EC]'>
           2025년{' '}
           <span className='text-[#FFEF4C]'>{categoryMapping[category]}</span>을
           원하는
@@ -88,22 +88,35 @@ const ResultPage = () => {
           <div
             className='w-[80%] mx-auto aspect-[1.16/1] bg-[#FFF8EC] shadow-[4px_4px_12px_0px_#FFB87F3D] relative'
             style={{ transform: 'rotate(2.26deg)' }}
-          >
-            <Image
-              src='/cookie-up.svg'
-              alt='Cookie'
-              width={75}
-              height={80}
-              className='absolute -top-2 -left-12'
-            />
-            <Image
-              src='/cookie-bottom.svg'
-              alt='Cookie'
-              width={80}
-              height={80}
-              className='absolute -bottom-5 -right-11'
-            />
-          </div>
+          />
+          <Image
+            src='/cookie-up-side.svg'
+            alt='Cookie'
+            width={120}
+            height={120}
+            className='absolute -top-8 -left-10 -z-10'
+          />
+          <Image
+            src='/cookie-up.svg'
+            alt='Cookie'
+            width={120}
+            height={120}
+            className='absolute -top-8 -left-10'
+          />
+          <Image
+            src='/cookie-bottom-side.svg'
+            alt='Cookie'
+            width={120}
+            height={120}
+            className='absolute -bottom-12 -right-7 -z-10'
+          />
+          <Image
+            src='/cookie-bottom.svg'
+            alt='Cookie'
+            width={120}
+            height={120}
+            className='absolute -bottom-12 -right-7'
+          />
           <div
             className='absolute inset-0 flex flex-col items-center justify-center space-y-4'
             style={{ transform: 'rotate(2.26deg)' }}
@@ -130,7 +143,7 @@ const ResultPage = () => {
         </div>
       </div>
 
-      <div className='flex flex-col w-[80%] max-w-sm gap-2 m-auto mb-5'>
+      <div className='flex flex-col w-[80%] max-w-sm gap-2 m-auto mb-5 mt-1'>
         <Button onClick={handleShare} variant='primary'>
           뽑기 공유하고 운 받아가기
         </Button>
