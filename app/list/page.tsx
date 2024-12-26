@@ -24,21 +24,21 @@ const ListPage = () => {
 
   return (
     <div className='flex flex-col h-[100dvh]'>
-      <div className='flex-1 flex items-center justify-center p-3 pb-24'>
-        <div className='flex flex-col items-center space-y-7 w-full max-w-sm'>
-          <h1 className='text-2xl font-bold text-center font-[Paperlogy] text-[#FFF8EC]'>
+      <div className='flex-1 flex items-center justify-center p-3 [@media(max-height:500px)]:p-2 pb-24 [@media(max-height:500px)]:pb-16'>
+        <div className='flex flex-col items-center space-y-7 [@media(max-height:500px)]:space-y-2 w-full max-w-sm'>
+          <h1 className='text-2xl [@media(max-height:530px)]:text-xl font-bold text-center font-[Paperlogy] text-[#FFF8EC]'>
             2025년 가장 얻고
             <br />
             싶은 것은 무엇인가요?
           </h1>
-          <div className='grid grid-cols-2 gap-3 w-full h-full'>
+          <div className='grid grid-cols-2 gap-3 [@media(max-height:500px)]:gap-2 w-full h-full'>
             {items.map(({ text, icon }) => (
               <div
                 key={text}
                 onClick={() => handleClick(text)}
-                className='flex flex-col items-center justify-center p-3 bg-[#FFECD5] cursor-pointer rounded-lg touch-action-manipulation'
+                className='flex flex-col items-center justify-center p-3 [@media(max-height:500px)]:p-2 bg-[#FFECD5] cursor-pointer rounded-lg touch-action-manipulation'
               >
-                <div className='relative w-10 h-10 mb-2'>
+                <div className='relative w-10 [@media(max-height:530px)]:h-8 h-10 mb-2'>
                   <Image
                     src={icon}
                     alt={text}
@@ -46,7 +46,9 @@ const ListPage = () => {
                     className='object-contain'
                   />
                 </div>
-                <span className='text-md font-bold'>{text}</span>
+                <span className='text-md font-bold [@media(max-height:500px)]:text-sm'>
+                  {text}
+                </span>
               </div>
             ))}
           </div>
