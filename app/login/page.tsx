@@ -61,7 +61,7 @@ export default function Login() {
             />
           </h1>
           <div className='text-center'>
-            <p className='text-xs text-[#FFF8EC]'>
+            <p className='text-xs text-[#FFF8EC] font-[Paperlogy] leading-5'>
               2025년 내가 가장 원하는 것을 <br /> 얻게 해줄 노래를 들어보세요
             </p>
           </div>
