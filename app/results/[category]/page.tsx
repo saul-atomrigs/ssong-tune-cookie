@@ -69,7 +69,7 @@ const ResultPage = () => {
 
   return (
     <div className='flex flex-col h-[100dvh]'>
-      <div className='flex-1 flex flex-col items-center pt-7 space-y-8'>
+      <div className='flex-1 flex flex-col items-center py-8 space-y-8'>
         <h1 className='text-2xl text-center font-[Paperlogy-Bold] text-[#FFF8EC]'>
           2025년{' '}
           <span className='text-[#FFEF4C]'>{categoryMapping[category]}</span>을
