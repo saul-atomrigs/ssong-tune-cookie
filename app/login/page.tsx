@@ -50,8 +50,15 @@ export default function Login() {
             className='w-[160px] h-auto sm:w-[200px] md:w-[240px] [@media(max-height:500px)]:hidden'
             priority
           />
-          <h1 className='text-2xl font-bold font-[Paperlogy] text-[#FFF8EC]'>
-            노래 포춘쿠키 🎶
+          <h1 className='text-2xl font-bold font-[Paperlogy] text-[#FFF8EC] flex items-center gap-2'>
+            노래 포춘쿠키
+            <Image
+              src='/music-note.svg'
+              alt='Music Note'
+              width={24}
+              height={24}
+              className='inline-block'
+            />
           </h1>
           <div className='text-center'>
             <p className='text-xs text-[#FFF8EC]'>
