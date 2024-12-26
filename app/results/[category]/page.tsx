@@ -86,16 +86,16 @@ const ResultPage = () => {
             <Image
               src='/cookie-up.svg'
               alt='Cookie'
-              width={60}
-              height={60}
-              className='absolute -top-6 -left-7'
+              width={75}
+              height={80}
+              className='absolute -top-2 -left-12'
             />
             <Image
               src='/cookie-bottom.svg'
               alt='Cookie'
-              width={60}
-              height={60}
-              className='absolute -bottom-7 -right-7'
+              width={80}
+              height={80}
+              className='absolute -bottom-5 -right-11'
             />
           </div>
           <div
