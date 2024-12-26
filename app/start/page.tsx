@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/app/components';
+import Lottie from 'react-lottie-player';
+import sunAnimation from '@/public/sun-motion.json';
 
 const App = () => {
   const router = useRouter();
@@ -13,13 +15,19 @@ const App = () => {
           <h1 className='text-5xl sm:text-7xl [@media(max-height:750px)]:text-3xl font-bold text-center font-[ChangwonDangamAsac] text-[#FFFBE6] leading-tight mb-2'>
             2025 <br /> 쏭-춘쿠키
           </h1>
-          <div className='w-[100vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] [@media(max-height:750px)]:w-[60vw] aspect-[4/3] [@media(max-height:500px)]:aspect-[5/3] flex items-center justify-center'>
+          <div className='relative w-[100vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] [@media(max-height:600px)]:w-[60vw] aspect-[4/3] [@media(max-height:500px)]:aspect-[5/3] flex items-center justify-center'>
+            <Lottie
+              animationData={sunAnimation}
+              play
+              loop
+              className='absolute left-1/4 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] z-0'
+            />
             <Image
               src='/snake.svg'
               alt='Snake'
               width={800}
               height={600}
-              className='w-full h-full object-contain'
+              className='w-full h-full object-contain relative z-10'
             />
           </div>
           <p className='text-md sm:text-xl [@media(max-height:750px)]:text-sm text-[#FFFBE6] text-center font-medium font-[Paperlogy] px-4 mt-2'>
