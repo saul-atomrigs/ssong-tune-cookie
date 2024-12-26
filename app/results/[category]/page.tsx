@@ -51,6 +51,12 @@ const ResultPage = () => {
     }
   };
 
+  const handleRetry = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    router.push('/list');
+  };
+
   if (isLoading) {
     return (
       <main className='grid h-[100dvh] grid-rows-[1fr,auto]'>
@@ -124,7 +130,7 @@ const ResultPage = () => {
         <Button onClick={handleShare} variant='primary'>
           뽑기 공유하고 운 받아가기
         </Button>
-        <Button onClick={() => router.push('/list')} variant='secondary'>
+        <Button onClick={handleRetry} variant='secondary'>
           다시 뽑기
         </Button>
       </div>
