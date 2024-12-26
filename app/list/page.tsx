@@ -36,7 +36,7 @@ const ListPage = () => {
               <div
                 key={text}
                 onClick={() => handleClick(text)}
-                className='flex flex-col items-center justify-center p-3 bg-[#FFECD5] cursor-pointer hover:opacity-80 rounded-lg'
+                className='flex flex-col items-center justify-center p-3 bg-[#FFECD5] cursor-pointer hover:opacity-80 rounded-lg touch-action-manipulation'
               >
                 <div className='relative w-10 h-10 mb-2'>
                   <Image

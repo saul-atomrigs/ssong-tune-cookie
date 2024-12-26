@@ -31,7 +31,10 @@ export default function Login() {
     setIsFocused(false);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     if (username.length > 0) {
       useUserStore.getState().setName(username);
       router.push('/list');
