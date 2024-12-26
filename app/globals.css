@@ -10,6 +10,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: 'Paperlogy-Bold';
+  src: url('/fonts/Paperlogy-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,6 +25,7 @@
   --foreground: #171717;
   --font-changwon: 'ChangwonDangamAsac', sans-serif;
   --font-paperlogy: 'Paperlogy', sans-serif;
+  --font-paperlogy-bold: 'Paperlogy-Bold', sans-serif;
   --screen-height: 100dvh;
 }
 
