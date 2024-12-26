@@ -13,7 +13,7 @@ const App = () => {
           <h1 className='text-5xl sm:text-7xl [@media(max-height:600px)]:text-3xl font-bold text-center font-[ChangwonDangamAsac] text-[#FFFBE6] leading-tight mb-2'>
             2025 <br /> 쏭-춘쿠키
           </h1>
-          <div className='relative w-[100vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] [@media(max-height:600px)]:w-[60vw] aspect-[4/3] [@media(max-height:500px)]:aspect-[5/3] px-4'>
+          <div className='relative w-[100vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] [@media(max-height:600px)]:w-[60vw] aspect-[4/3] [@media(max-height:500px)]:aspect-[5/3]'>
             <Image
               src='/snake.svg'
               alt='Snake'
