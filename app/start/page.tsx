@@ -15,7 +15,7 @@ const App = () => {
           <h1 className='text-5xl sm:text-7xl [@media(max-height:600px)]:text-3xl [@media(max-height:470px)]:hidden font-bold text-center font-[ChangwonDangamAsac] text-[#FFFBE6] leading-tight mb-2'>
             2025 <br /> 쏭-춘쿠키
           </h1>
-          <div className='relative w-[100vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] aspect-[4/3] [@media(max-height:500px)]:aspect-[5/3] flex items-center justify-center'>
+          <div className='relative w-[100vw] aspect-[4/3] [@media(max-height:500px)]:aspect-[5/3] [@media(max-height:380px)]:hidden max-w-[700px] flex items-center justify-center'>
             <Lottie
               animationData={sunAnimation}
               play
@@ -27,7 +27,7 @@ const App = () => {
               alt='Snake'
               width={100}
               height={100}
-              className='w-full h-full object-contain relative z-10'
+              className='w-full h-full relative z-10'
             />
           </div>
           <p className='text-md sm:text-xl [@media(max-height:660px)]:text-sm [@media(max-height:520px)]:hidden text-[#FFFBE6] text-center font-medium font-[Paperlogy] px-4 mt-2'>
