@@ -61,7 +61,7 @@ const ResultPage = () => {
     return (
       <main className='grid h-[100dvh] grid-rows-[1fr,auto]'>
         <div className='flex flex-col items-center justify-center -mt-20'>
-          <h1 className='text-2xl font-[Paperlogy] text-[#FFF8EC] mb-4'>
+          <h1 className='text-2xl font-[Paperlogy] text-[#FFF8EC]'>
             쿠키 고르는 중..
           </h1>
           <Lottie loop animationData={cookieAnimation} play />
