@@ -76,7 +76,7 @@ const ResultPage = () => {
   return (
     <div className='flex flex-col h-[100dvh]'>
       <div className='flex-1 flex flex-col items-center py-10 [@media(max-height:680px)]:pt-4 space-y-6 [@media(max-height:680px)]:space-y-4'>
-        <h1 className='text-2xl [@media(max-height:680px)]:text-lg [@media(min-height:680px)]:mb-5 [@media(max-height:520px)]:hidden text-center font-[Paperlogy-Bold] text-[#FFF8EC]'>
+        <h1 className='text-2xl [@media(max-height:680px)]:text-xl [@media(min-height:680px)]:mb-5 [@media(max-height:520px)]:hidden text-center font-[Paperlogy] text-[#FFF8EC]'>
           2025년{' '}
           <span className='text-[#FFEF4C]'>{categoryMapping[category]}</span>을
           원하는
