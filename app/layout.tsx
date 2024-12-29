@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import UsernameRequired from './UsernameRequired';
 import KakaoScript from './KakaoScript';
@@ -43,6 +44,7 @@ export default function RootLayout({
         }}
       >
         <UsernameRequired>{children}</UsernameRequired>
+        <Analytics />
       </body>
       <KakaoScript />
     </html>
