@@ -8,10 +8,9 @@ import KakaoScript from './KakaoScript';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: '쏭-춘쿠키',
+  title: '나를 대박나게 해줄 새해 노래 듣고 2025년 시작하세요',
   description: '새해 운세를 음악으로 들어보세요!',
   openGraph: {
-    description: '2025년 내가 원하는 것을 얻게 해줄 노래는?',
     images: [
       {
         url: '/open-graph-original.png',

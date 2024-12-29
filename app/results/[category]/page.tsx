@@ -39,8 +39,8 @@ const ResultPage = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: '2025년 대박나러 가기',
-          text: '내가 원하는 운세를 가져다 줄 새해 노래를 들어보세요!',
+          title: '',
+          text: '',
           url: 'https://ssong-tune-cookie.vercel.app/',
         });
       } catch (error) {
