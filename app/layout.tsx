@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: '나를 대박나게 해줄 새해 노래 듣고 2025년 시작하세요',
-  description: '새해 운세를 음악으로 들어보세요!',
   openGraph: {
     title: '나를 대박나게 해줄 새해 노래 듣고 2025년 시작하세요',
     images: [
