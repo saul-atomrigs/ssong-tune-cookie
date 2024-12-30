@@ -8,7 +8,7 @@ import useUserStore from '@/store/userStore';
 
 const TEXT_LIMIT = 8;
 const ALLOWED_PATTERN =
-  /^[ㄱ-ㅎ가-힣a-zA-Z0-9!@#$%^&*(),.?":{}|<>~\-_=+\\/\[\]]{1,8}$/;
+  /^[0-9a-zA-Z가-힣ㆍᆞᆢㄱ-ㅎㅏ-ㅣ\x20!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{1,8}$/gi;
 
 export default function Login() {
   const { name } = useUserStore();
