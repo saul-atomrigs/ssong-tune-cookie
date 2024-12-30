@@ -7,7 +7,8 @@ import { TextInput, Button, Ads } from '@/app/components';
 import useUserStore from '@/store/userStore';
 
 const TEXT_LIMIT = 8;
-const ALLOWED_PATTERN = /^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z\s!@#$%^&*(),.?":{}|<>]*$/;
+const ALLOWED_PATTERN =
+  /^[ㄱ-ㅎ가-힣a-zA-Z0-9!@#$%^&*(),.?":{}|<>~\-_=+\\/\[\]]{1,8}$/;
 
 export default function Login() {
   const { name } = useUserStore();
