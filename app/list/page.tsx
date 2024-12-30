@@ -24,7 +24,7 @@ const ListPage = () => {
 
   return (
     <div className='flex flex-col h-[100dvh]'>
-      <div className='flex-1 flex items-center justify-center p-3 [@media(max-height:500px)]:p-2 pb-24 [@media(max-height:500px)]:pb-16'>
+      <div className='h-full flex items-center justify-center p-3 [@media(max-height:500px)]:p-2 pb-24 [@media(max-height:500px)]:pb-16'>
         <div className='flex flex-col items-center space-y-7 [@media(max-height:500px)]:space-y-2 w-full max-w-sm'>
           <h1 className='text-2xl [@media(max-height:530px)]:text-xl font-bold text-center font-[Paperlogy] text-[#FFF8EC]'>
             2025년 가장 얻고
